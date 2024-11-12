@@ -96,6 +96,7 @@ export const fetchServiceInfo = async (evaluationItemId) => {
 export const fetchIndicators = async (contractId, yearMonth) => {
   try {
     const token = localStorage.getItem("accessToken");
+
     const response = await axios.get(`/common/${contractId}/indicators`, {
       headers: {
         Authorization: `Bearer ${token}`,
