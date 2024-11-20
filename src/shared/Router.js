@@ -22,13 +22,13 @@ import StatisticsResults from "../pages/contractManager/StatisticsResults";
 import YearIndicator from "../pages/contractManager/YearIndicator";
 import StatisticsPdf from "../pages/contractManager/StatisticsPdf";
 import UserYearIndicator from "../pages/user/UserYearIndicator";
-
+import Loading from "../components/common/Loading";
 const LoginPage = lazy(() => import("../pages/login/LoginPage"));
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" index element={<LoginPage />} />
           {/* 사용자 권한 페이지들 */}
